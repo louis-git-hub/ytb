@@ -13,7 +13,7 @@ def download():
     url = request.form['url']  # Récupération de l'URL à partir du formulaire
     yt = YouTube(url)
     video = yt.streams.get_highest_resolution()
-    download_path = video.download('/chemin/de/destination')
+    download_path = video.download('C:\Users\louis\OneDrive\Bureau\web-dev\YTB_downloader')
     return f'Vidéo téléchargée : {download_path}'
 
 if __name__ == '__main__':
