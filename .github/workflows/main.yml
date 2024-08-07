@@ -15,10 +15,10 @@ jobs:
 
     - name: Deploy to Server
       run: |
-        ssh -o StrictHostKeyChecking=no sc1baju4486@109.234.161.26 "
+        ssh -o StrictHostKeyChecking=no ssc1baju4486@sc1baju4486.universe.wf "
           cd /home/sc1baju4486/repositories/py
           git pull origin main
         "
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-        
+      
