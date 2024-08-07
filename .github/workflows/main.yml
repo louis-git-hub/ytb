@@ -1,0 +1,23 @@
+name: Auto Deploy to Server
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Deploy to Server
+      run: |
+        ssh -o StrictHostKeyChecking=no sc1baju4486@109.234.161.26 "
+          cd /home/sc1baju4486/repositories/py
+          git pull origin main
+        "
+      env:
+        SSH_PRIVATE_KEY: ${{ louis }}
