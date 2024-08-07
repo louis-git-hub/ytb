@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-    <title>Téléchargeeeeeeeur YouTube</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Téléchargeur de Vidéo YouTube</title>
 </head>
 <body>
-    <form action="/download" method="post">
-        <input type="text" name="url" placeholder="Entrez l'URL de la vidéo YouTube">
-        <input type="submit" value="Télécharger">
+    <h1>Téléchargeur de Vidéo YouTube</h1>
+    <form action="telecharger.php" method="post">
+        <label for="videoUrl">Entrez l'URL de la vidéo YouTube :</label>
+        <input type="text" id="videoUrl" name="videoUrl" required>
+        <button type="submit">Télécharger</button>
     </form>
 </body>
 </html>
